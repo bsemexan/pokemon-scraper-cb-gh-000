@@ -3,7 +3,8 @@ class Pokemon
   attr_reader :id
 
 
-  def initialize(name, type, db)
+  def initialize(id, name, type, db)
+    @id = id
     @name = name
     @type = type
     @db = db
@@ -14,5 +15,6 @@ class Pokemon
   end
 
   def self.find(name, type, db)
+
   end
 end
