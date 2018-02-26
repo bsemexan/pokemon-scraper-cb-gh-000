@@ -11,6 +11,7 @@ class Pokemon
   end
 
   def self.save(name, type, db)
+    db.execute("INSERT INTO pikachu_from_db (name, type, db) VALUES (?,?,?)", name, type)
   end
 
   def self.find(name, type, db)
