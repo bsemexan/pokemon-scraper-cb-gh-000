@@ -19,7 +19,7 @@ class Pokemon
     Pokemon.new(id:gotta_find_em[0], name:gotta_find_em[1], type:gotta_find_em[2], db: db)
   end
 
-  def self.alter_hp(hp, db)
+  def alter_hp(hp, db)
     db.execute("UPDATE pokemon SET hp = ?", hp)
   end
 end
