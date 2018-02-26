@@ -18,4 +18,8 @@ class Pokemon
     gotta_find_em = db.execute("SELECT * FROM pokemon WHERE id=?", id).flatten
     Pokemon.new(id:gotta_find_em[0], name:gotta_find_em[1], type:gotta_find_em[2], db: db)
   end
+
+  def self.alter_hp(val, db)
+    db.execute("UPDATE pokemon SET hp = ?", val)
+  end
 end
