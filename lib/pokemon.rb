@@ -8,4 +8,5 @@ class Pokemon
   end
 
   def self.find(name, type, db)
+  end
 end
